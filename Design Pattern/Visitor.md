@@ -5,7 +5,7 @@
 ## Example
 
 ### Abstract Syntax Tree(AST)
-![ast](image/ast.png)
+![[image/ast.png]]
 - #### Compile程式首先要把資料結構建起來，每個節點都要TypeCheck檢查其資料型態(ex. assignment兩邊Type要一樣)。
 - #### 每個節點都應該要CodeGen (ex. x86, asm)。
 - #### PrettyPrint這個責任(功能)跟Compiler沒什麼關係。
@@ -14,7 +14,7 @@
 - ##### SRP: 一個class只要賦予一個責任(不限只有一個責任)，它擔負的責任應該是同一類型(ex. Compilation相關責任)。
 ### Solution
 
-![class diagram](image/visitor_class_diagram.png) 
+![[image/visitor_class_diagram.png]]
 -  #### 負的責任太多就要外包給別人做。(委外給專家做)
 - #### 上面是visitor, 下面是被visit。
 - #### Node把責任甩掉(accept讓visitor進來)，v→VisitAssignment把自己當參數給visitor。
@@ -24,7 +24,7 @@
 
 
 ### CaptionedContent的Sequence Diagram(理解物件之間的溝通關係)
-![sequence diagram](image/visitor_sequence_diagram.png)
+![[image/visitor_sequence_diagram.png]]
 
 ### Encapsulation
 - 把資料(Data)跟運算(Method)打包在一起變成一個單位。
