@@ -1,0 +1,1 @@
+# **Problem:如何遍歷某個class但不想透漏class的結構時?**

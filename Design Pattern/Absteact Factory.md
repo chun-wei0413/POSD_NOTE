@@ -1,0 +1,1 @@
+# **Problem:How to create a instance，but product is a family?**
