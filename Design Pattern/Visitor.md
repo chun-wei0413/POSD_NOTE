@@ -26,12 +26,17 @@
 ### CaptionedContent的Sequence Diagram(理解物件之間的溝通關係)
 ![sequence_diagram](../img/visitor_sequence_diagram.png)
 
-### Encapsulation
-- 把資料(Data)跟運算(Method)打包在一起變成一個單位。
-- Why we encapsulate? 需要把class物件資料隱藏起來，以免對外界有依賴性。like知道某件事就要負責任。 
 ### Consequence
 - ==(代價)Breaking Encapsulation: 把concrete element的method給專家(visitor)使用。==
 - 當你使用type casting(down cast)時，代表==polymorphism不見了==。但在visitCaptionedContent時，拿到的本來就是CaptionedContent所以可以直接call CaptionedContent本身的public method而不是只去透過Content<<Interface>>>去呼叫method。
 - FindVisitor會讓物件產生side effect。因為
 ### ==利用Double-Dispatch取代polymorphism==
 - Double-Dispatch:需要經過2個物件(Receiver)來決定最後執行哪個method(Content 、WordCountingVisitor)。
+
+### setPosition責任問題??
+![text_class](../img/text_class.png)
+- 在findVisitor我們需要用到set and get Position，那我們應該要把這個責任賦予給物件本身(ex. text，picture，captionedContent，hybridcontent)，如果composite的所有concrete class都需要這個method，那我們就應該把它(set and get Position)升級到Content(interface)才對。
+- 我個人認為應該要從concrete class開始時做set and get Position，如果確定leaf and composite都需要才把他升級到interface上，因為它不一定是結構中所有物件的責任(說不定我的選擇太保守XD)。
+
+![Content_visitor](../img/Content_visitor.png)
+- accept is a delegate responsibility、Iterator is a structure responsibility.[[RDD]]
