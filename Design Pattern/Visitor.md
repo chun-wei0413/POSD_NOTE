@@ -2,6 +2,8 @@
 
 ## 個人想法: 當Interface底下的concrete class都適用某個method時，就可以套Visitor，前提是這個interface職責太多才需要套如此複雜的pattern。
 
+## ==甚麼情況要加Visitor(老師看法)==:當composite 的不會有新的component的時候。ex. compiler因為只要leaf一加，visitor的method一定會動，這樣會破壞Visitor(Abstract class)的closure([[OCP]])。
+
 ## Example
 
 ### Abstract Syntax Tree(AST)
