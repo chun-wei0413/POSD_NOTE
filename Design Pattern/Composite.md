@@ -11,3 +11,7 @@
 在[[RDD]]中可以知道
 1. appearance and hit detection屬於一個物件的computing,直接做的責任叫Computing。
 2. structure是operation related to knowing知道最基本的責任是structure
+
+## 沒有繼承關係不影響Composite
+![Composite1](../img/Composite1.png)
+- 這個Thing也算是Composite pattern。

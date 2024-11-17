@@ -19,7 +19,7 @@
 	- command可以方便logging因為可以直接把物件存起來。
 	- 方便undo，必須有某種回存的機制。
 - cons
-	- Its indirection.間接做到這些動作。
+	- Its indirection，間接做到這些動作。
 
 
 ## Structure
@@ -30,13 +30,20 @@
 
 ## Participants
 - Command
-		- declares an interface for executing an operation.
+	- declares an interface for executing an operation.
 - ConcreteCommand (PasteCommand, OpenCommand)
-		- defines a binding between a Receiver object and an action.
-		- implements Execute by invoking the corresponding operation(s) on Receiver.
+	- defines a binding between a Receiver object and an action.
+	- implements Execute by invoking the corresponding operation(s) on Receiver.
 - Client (Application)
-		- creates a ConcreteCommand object and sets its receiver.
+	- creates a ConcreteCommand object and sets its receiver.
 - Invoker(MenuItem)
-		- asks the command to carry out the request.
+	- asks the command to carry out the request.
 - Receiver(Document, Application)
-		-  knows how to perform the operations associated with carrying out a request. Any class may server as a Receiver.
+	- knows how to perform the operations associated with carrying out a request. Any class may server as a Receiver.
+
+## Consequences
+![Command5](../img/Command5.png)
+1. 過去是把邏輯全部放在invoker身上，現在把他們關係decouple。
+2. 把Command升級成物件操作。
+3. 像先前提到的macroCommand變成Composite的型態。
+4. 加新的Command很容易，不用修改既有的classes。
