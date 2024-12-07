@@ -20,8 +20,23 @@
               "icon": "lucide-file",
               "title": "JUnit A Cook's Tour"
             }
+          },
+          {
+            "id": "26059a2a2e947675",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Design Pattern/Observer.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "Observer"
+            }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -173,21 +188,23 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "cf4e53cb24f41133",
+  "active": "26059a2a2e947675",
   "lastOpenFiles": [
+    "JUnit A Cook's Tour.md",
+    "Design Pattern/Observer.md",
+    "img/Observer1.PNG",
+    "Design Pattern/Command.md",
     "Design Pattern/Adapter.md",
     "img/Adapter2.png",
     "img/Adapter1.png",
     "Design Pattern/Template Method.md",
     "img/TemplateMethod3.png",
-    "JUnit A Cook's Tour.md",
     "img/JUnit/JUnitPatternSummary.png",
     "img/JUnit/CreatingATestSuite.png",
     "img/JUnit/CompositeInTest.png",
     "img/JUnit/anonymous2.png",
     "img/JUnit/anonymous.png",
     "img/JUnit/CollectingParameter.png",
-    "img/JUnit/startTest.png",
     "img/JUnit",
     "SOLID/OCP.md",
     "Design Pattern/Prototype.md",
@@ -198,11 +215,9 @@
     "Design Pattern/Strategy.md",
     "Design Pattern/Singleton.md",
     "Design Pattern/State.md",
-    "Design Pattern/Observer.md",
     "Design Pattern/Visitor.md",
     "README.md",
     "Design Pattern/Composite.md",
-    "Design Pattern/Command.md",
     "Design Pattern/Facade.md",
     "img/Command4.png.~tmp",
     "().md",
